@@ -1,0 +1,29 @@
+﻿<Window x:Class="LogicDiagramEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Интерактивный редактор логических диаграмм" Height="600" Width="800">
+    <Grid>
+        <Canvas Name="DiagramCanvas" Background="White" Margin="0,153,0,0" />
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="10">
+            <TextBlock Text="Добавить блоки:" FontWeight="Bold" />
+            <StackPanel Orientation="Horizontal">
+                <Button Content="AND" Click="AddAndButton_Click" Margin="5"/>
+                <Button Content="OR" Click="AddOrButton_Click" Margin="5"/>
+                <Button Content="NOT" Click="AddNotButton_Click" Margin="5"/>
+                <Button Content="XOR" Click="AddXorButton_Click" Margin="5"/>
+                <Button Content="NAND" Click="AddNandButton_Click" Margin="5"/>
+                <Button Content="NOR" Click="AddNorButton_Click" Margin="5"/>
+            </StackPanel>
+            <TextBlock Text="Тестирование:" FontWeight="Bold" />
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Тестировать" Click="TestButton_Click" Margin="5"/>
+                <Button Content="Шаг" Click="StepButton_Click" Margin="5"/>
+            </StackPanel>
+            <TextBlock Text="Файлы:" FontWeight="Bold" />
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Сохранить диаграмму" Click="SaveButton_Click" Margin="5"/>
+                <Button Content="Загрузить диаграмму" Click="LoadButton_Click" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
